@@ -157,6 +157,12 @@ class tabBarViewController: UIViewController {
         accountViewController =  storyboard.instantiateViewControllerWithIdentifier("accountViewController")
         trendingViewController =  storyboard.instantiateViewControllerWithIdentifier("trendingViewController")
         
+        addChildViewController(searchViewController)
+        contentView.addSubview(searchViewController.view)
+        searchViewController.view.frame = contentView.bounds
+       searchViewController.didMoveToParentViewController(self)
+    
+            
         // Do any additional setup after loading the view.
     }
     

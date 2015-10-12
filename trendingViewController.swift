@@ -8,12 +8,24 @@
 
 import UIKit
 
-class trendingViewController: UIViewController {
+class trendingViewController: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var feedImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scrollView.contentSize = CGSize(width: 320, height: 1217)
+        
+        scrollView.delegate = self
+        
+        // Do any additional setup after loading the view.
+        
 
-        // Do any additional setup after loading the view. 
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

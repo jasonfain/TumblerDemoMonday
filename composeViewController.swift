@@ -10,6 +10,11 @@ import UIKit
 
 class composeViewController: UIViewController {
 
+    @IBAction func onNevermindButton(sender: AnyObject) {
+        
+    dismissViewControllerAnimated(true, completion: {})
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
